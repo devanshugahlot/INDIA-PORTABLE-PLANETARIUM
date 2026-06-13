@@ -32,7 +32,7 @@ const Footer = () => {
             >
               <div className="flex items-center space-x-3">
                 <img
-                  src="src\assets\logo.png"
+                  src="src/assets/logo.png"
                   alt="Cosmos Dome Planetarium Logo"
                   className="h-12 w-auto object-contain bg-white/5 p-1 rounded-lg border border-white/10"
                 />

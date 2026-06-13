@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
@@ -118,40 +117,34 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-[#040D1F]/95 border-b border-white/10 backdrop-blur-lg overflow-hidden"
-          >
-            <div className="px-4 pt-2 pb-6 space-y-1.5 sm:px-6">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleLinkClick(e, link.href)}
-                  className="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-[#00B4FF] hover:bg-white/5 transition-all"
-                >
-                  {link.name}
-                </a>
-              ))}
-              <div className="pt-4 px-3">
-                <a
-                  href="#contact"
-                  onClick={(e) => handleLinkClick(e, '#contact')}
-                  className="glow-button-blue block w-full text-center py-3 rounded-full text-base font-semibold tracking-wider uppercase shadow-lg"
-                  id="mobile-cta-btn"
-                >
-                  Book Appointment
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`lg:hidden bg-[#040D1F]/95 border-b border-white/10 backdrop-blur-lg overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-[500px] opacity-100 py-2' : 'max-h-0 opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="px-4 pt-2 pb-6 space-y-1.5 sm:px-6">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
+              className="block px-3 py-3 rounded-md text-base font-medium text-gray-300 hover:text-[#00B4FF] hover:bg-white/5 transition-all"
+            >
+              {link.name}
+            </a>
+          ))}
+          <div className="pt-4 px-3">
+            <a
+              href="#contact"
+              onClick={(e) => handleLinkClick(e, '#contact')}
+              className="glow-button-blue block w-full text-center py-3 rounded-full text-base font-semibold tracking-wider uppercase shadow-lg"
+              id="mobile-cta-btn"
+            >
+              Book Appointment
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

@@ -145,7 +145,7 @@ const SolarSystem = () => {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="relative w-full max-w-lg bg-[#040D1F] border border-[#00B4FF]/30 p-8 rounded-3xl shadow-[0_0_50px_rgba(0,180,255,0.2)] overflow-hidden"
+              className="relative w-full max-w-lg bg-[#040D1F] border border-[#00B4FF]/30 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-[0_0_50px_rgba(0,180,255,0.2)] overflow-hidden"
             >
               {/* Star details background header decoration */}
               <div className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${selectedPlanet.gradient}`}></div>
@@ -153,19 +153,19 @@ const SolarSystem = () => {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedPlanet(null)}
-                className="absolute top-6 right-6 text-gray-400 hover:text-white text-xl transition-colors"
+                className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-400 hover:text-white text-xl transition-colors z-20"
                 aria-label="Close modal"
               >
                 <FaTimes />
               </button>
 
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center space-x-3 sm:space-x-4 pr-8">
                   <div
-                    className={`w-12 h-12 rounded-full bg-gradient-to-br ${selectedPlanet.gradient}`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br ${selectedPlanet.gradient}`}
                     style={{ boxShadow: `0 0 15px ${selectedPlanet.shadowColor}` }}
                   ></div>
-                  <h3 className="font-orbitron font-extrabold text-3xl text-white tracking-wider">
+                  <h3 className="font-orbitron font-extrabold text-2xl sm:text-3xl text-white tracking-wider">
                     {selectedPlanet.name}
                   </h3>
                 </div>

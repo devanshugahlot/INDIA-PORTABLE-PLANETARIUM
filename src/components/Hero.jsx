@@ -81,25 +81,25 @@ const Hero = () => {
               <span className="block overflow-hidden pb-2">
                 <motion.span
                   variants={wordVariants}
-                  className="block text-5xl sm:text-7xl md:text-8xl text-white font-black"
+                  className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-black"
                 >
-                  INDIA
+                  Convert
                 </motion.span>
               </span>
               <span className="block overflow-hidden pb-2">
                 <motion.span
                   variants={wordVariants}
-                  className="block text-5xl sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-[#00B4FF] to-[#7B2FBE]"
+                  className="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-[#00B4FF] to-[#7B2FBE] font-black"
                 >
-                  PORTABLE
+                  your school in
                 </motion.span>
               </span>
               <span className="block overflow-hidden pb-2">
                 <motion.span
                   variants={wordVariants}
-                  className="block text-4xl sm:text-6xl md:text-7xl text-white font-bold"
+                  className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold"
                 >
-                  PLANETARIUM
+                  cosmic Haven.
                 </motion.span>
               </span>
             </h1>
@@ -143,9 +143,9 @@ const Hero = () => {
             className="lg:col-span-5 flex items-center justify-center relative mt-8 lg:mt-0"
           >
             {/* Concentric Glowing Space Rings */}
-            <div className="absolute w-[360px] h-[360px] border border-[#00B4FF]/10 rounded-full planet-orbit opacity-40"></div>
-            <div className="absolute w-[440px] h-[440px] border border-[#7B2FBE]/10 rounded-full planet-orbit opacity-30 [animation-direction:reverse] [animation-duration:60s]"></div>
-            <div className="absolute w-[520px] h-[520px] border border-[#FFB830]/5 rounded-full planet-orbit opacity-20 [animation-duration:80s]"></div>
+            <div className="absolute w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] border border-[#00B4FF]/10 rounded-full planet-orbit opacity-40"></div>
+            <div className="absolute w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] border border-[#7B2FBE]/10 rounded-full planet-orbit opacity-30 [animation-direction:reverse] [animation-duration:60s]"></div>
+            <div className="absolute w-[400px] h-[400px] sm:w-[520px] sm:h-[520px] border border-[#FFB830]/5 rounded-full planet-orbit opacity-20 [animation-duration:80s]"></div>
 
             {/* 3D-style Globe */}
             <div className="globe-container">
@@ -155,7 +155,7 @@ const Hero = () => {
             </div>
             
             {/* Small orbiting moon element */}
-            <div className="absolute w-6 h-6 bg-gradient-to-r from-gray-300 to-gray-500 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.4)] animate-spin-slow origin-[220px_center]"></div>
+            <div className="absolute w-6 h-6 bg-gradient-to-r from-gray-300 to-gray-500 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.4)] animate-spin-slow origin-[160px_center] sm:origin-[220px_center]"></div>
           </motion.div>
 
         </div>
