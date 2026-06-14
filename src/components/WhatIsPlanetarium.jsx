@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlay, FaTimes } from "react-icons/fa";
 
@@ -68,8 +68,8 @@ const WhatIsPlanetarium = () => {
             <div className="relative group p-3 glass-card rounded-3xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-[#020B18] via-transparent to-transparent opacity-40 z-10"></div>
               <img
-                src="https://www.cosmosdome.in/wp-content/uploads/2023/07/NewDome1900.jpg"
-                alt="Cosmos Dome Planetarium Inflatable Dome"
+                src="/media/portable-dome-aerial.jpeg"
+                alt="India Portable Planetarium inflatable dome setup"
                 className="rounded-2xl w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-500 z-0"
               />
               {/* Image Glow Overlay */}
@@ -104,14 +104,14 @@ const WhatIsPlanetarium = () => {
               exit={{ scale: 0.9, y: 20 }}
               className="relative w-full max-w-4xl aspect-video bg-[#040D1F] rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
             >
-              <iframe
-                title="Cosmos Dome Planetarium Video"
+              <video
+                title="India Portable Planetarium video"
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/zDD_Pv8Adqg?si=Wz3YCBbnwy5Ygppz"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+                src="/media/planetarium-show-video.mp4"
+                poster="/media/students-inside-dome.jpeg"
+                controls
+                autoPlay
+              />
             </motion.div>
           </motion.div>
         )}

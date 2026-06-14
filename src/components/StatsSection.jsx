@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 // Helper component for count-up animation
@@ -41,13 +41,15 @@ const CounterCard = ({ targetValue, suffix, label }) => {
       { threshold: 0.2 }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    const currentCard = cardRef.current;
+
+    if (currentCard) {
+      observer.observe(currentCard);
     }
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+      if (currentCard) {
+        observer.unobserve(currentCard);
       }
     };
   }, [targetValue, hasAnimated]);
@@ -117,7 +119,7 @@ const StatsSection = () => {
             <div className="w-80 h-80 rounded-full border border-white/5 flex items-center justify-center animate-spin-slow">
               <div className="w-64 h-64 rounded-full border border-[#00B4FF]/10 flex items-center justify-center [animation-direction:reverse]">
                 <div className="w-48 h-48 rounded-full border border-[#FFB830]/5 flex items-center justify-center">
-                  <span className="text-white/20 font-orbitron text-[9px] tracking-[6px] uppercase rotate-12">COSMOS</span>
+                  <span className="text-white/20 font-orbitron text-[9px] tracking-[6px] uppercase rotate-12">INDIA</span>
                 </div>
               </div>
             </div>

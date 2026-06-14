@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGlobe, FaPalette, FaBookOpen, FaHandshake } from 'react-icons/fa';
 
@@ -8,7 +7,7 @@ const GrowWithUs = () => {
       id: 'planet-area',
       icon: <FaGlobe className="text-2xl text-[#FFB830]" />,
       title: 'Planet Area',
-      text: 'Experience the breathtaking cosmos with our state-of-the-art portable planetarium. Get ready for an immersive journey through the universe. Join us today!',
+      text: 'Experience the wonders of space with our state-of-the-art portable planetarium. Get ready for an immersive journey through the universe. Join us today!',
     },
     {
       id: 'creative',
@@ -49,7 +48,7 @@ const GrowWithUs = () => {
   };
 
   return (
-    <section id="events" className="py-20 bg-[#020B18] relative z-10">
+    <section id="capabilities" className="py-20 bg-[#020B18] relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

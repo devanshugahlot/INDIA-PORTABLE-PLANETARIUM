@@ -1,13 +1,13 @@
-import React from 'react';
 import StarfieldBackground from './components/StarfieldBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatIsPlanetarium from './components/WhatIsPlanetarium';
-import AboutCosmos from './components/AboutCosmos';
+import AboutPlanetarium from './components/AboutPlanetarium';
 import GrowWithUs from './components/GrowWithUs';
 import NewDawnSection from './components/NewDawnSection';
 import StatsSection from './components/StatsSection';
 import BenefitsSection from './components/BenefitsSection';
+import MediaGallery from './components/MediaGallery';
 import SolarSystem from './components/SolarSystem';
 import OurGalaxy from './components/OurGalaxy';
 import ExploreSection from './components/ExploreSection';
@@ -33,7 +33,7 @@ function App() {
         <WhatIsPlanetarium />
 
         {/* 3. Nehru Planetarium & APJ Kalam Inspiration */}
-        <AboutCosmos />
+        <AboutPlanetarium />
 
         {/* 4. Grow With Us (Features) */}
         <GrowWithUs />
@@ -47,20 +47,23 @@ function App() {
         {/* 7. Benefits of Planetarium */}
         <BenefitsSection />
 
-        {/* 8. Rocky Planets (Solar System) */}
+        {/* 8. School events media gallery */}
+        <MediaGallery />
+
+        {/* 9. Rocky Planets (Solar System) */}
         <SolarSystem />
 
-        {/* 9. Galaxy featured research */}
+        {/* 10. Galaxy featured research */}
         <OurGalaxy />
 
-        {/* 10. Let's Explore With Us */}
+        {/* 11. Let's Explore With Us */}
         <ExploreSection />
 
-        {/* 11. Get in Touch Form */}
+        {/* 12. Get in Touch Form */}
         <ContactSection />
       </main>
 
-      {/* 12. Footer */}
+      {/* 13. Footer */}
       <Footer />
 
       {/* Floating WhatsApp Contact Button */}
